@@ -4,9 +4,8 @@ from keras import layers
 from keras.datasets import mnist
 
 # load data
-mnist_data = keras.datasets.mnist
-print(mnist)
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+print(len(x_train), len(y_train))
 
 # explore the data
 print(x_train.shape)
