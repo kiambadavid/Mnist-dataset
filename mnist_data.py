@@ -55,9 +55,28 @@ history = model.fit(x_train, y_train, epochs=10, batch_size=32, validation_data=
 print(history)
 
 # visualize the model
+# metric = accuracy
 plt.plot(history.history['accuracy'], label='accuracy')
 plt.plot(history.history['val_accuracy'], label='val_accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
+
+# visualize the model
+# loss
+plt.plot(history.history['loss'], label='loss')
+plt.plot(history.history['val_loss'], label='val_loss')
+plt.xlabel('Epoch')
+plt.ylabel('loss')
+plt.legend()
+plt.show()
+
+# visualize the model
+# loss againist accuracy
+plt.plot(history.history['loss'], label='loss')
+plt.plot(history.history['accuracy'], label='accuracy')
+plt.xlabel('accuracy')
+plt.ylabel('loss')
 plt.legend()
 plt.show()
